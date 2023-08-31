@@ -7,4 +7,4 @@ declare interface EasyClassNameClass {
   mode: Mode;
 }
 
-export type { EasyClassNameClass, Mode, Styles };
+export type { EasyClassNameClass };

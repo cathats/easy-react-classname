@@ -5,8 +5,11 @@
     "outDir": "lib",
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "declaration": true,
+    "sourceMap": true,
+    "declarationMap": true,
   },
-  "include": ["core"],
+  "include": ["core/**/*"],
   "exclude": ["node_modules", "lib"]
 }

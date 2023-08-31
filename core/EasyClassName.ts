@@ -1,10 +1,10 @@
-import type { EasyClassNameClass, Styles, Mode } from "./type.d";
+import { EasyClassNameClass } from "./type";
 
 export default class EasyClassName implements EasyClassNameClass {
-  styles: Styles;
-  mode: Mode;
+  styles: EasyClassNameClass["styles"];
+  mode: EasyClassNameClass["mode"];
 
-  constructor(styles: Styles, mode: EasyClassNameClass["mode"] = "normal") {
+  constructor(styles: EasyClassNameClass["styles"], mode: EasyClassNameClass["mode"] = "normal") {
     this.styles = styles;
     this.mode = mode;
   }

@@ -1,8 +1,10 @@
-export declare type Styles = { readonly [key: string]: string };
+declare type Styles = { readonly [key: string]: string };
 
-export declare type Mode = "normal" | "module";
+declare type Mode = "normal" | "module";
 
-export declare interface EasyClassNameClass {
+declare interface EasyClassNameClass {
   styles: Styles;
   mode: Mode;
 }
+
+export { EasyClassNameClass };

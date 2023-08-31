@@ -13,6 +13,9 @@ const paths = {
   inputType: path.join(dirName, "/core"),
 };
 
+console.log('path.join(paths.inputType, "type.d.ts"),', path.join(paths.inputType, "type.d.ts"),);
+
+
 export default [
   {
     input: paths.input,
