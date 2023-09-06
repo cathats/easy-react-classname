@@ -1,13 +1,13 @@
 {
   "name": "easy-react-classname",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "easy-react-classname 用于在 React 中便捷、直观地导入 CSS 类名，并允许通过开关的方式切换类名",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "typings": "./dist/index.d.ts",
+  "main": "./lib/index.js",
+  "module": "./lib/index.mjs",
+  "typings": "./lib/index.d.ts",
   "scripts": {
     "build:tsc": "tsc",
-    "build": "tsup ./core/index.ts --format cjs,esm --dts --minify"
+    "build": "tsup"
   },
   "keywords": [
     "React",
