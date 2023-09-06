@@ -11,9 +11,32 @@ pnpm i -S easy-react-classname
 
 
 
-## 使用
+## 使用方法一：ecn 方法
 
->   要使用 EasyReactClassName 必须创建实例
+ecn  方法可以直接创建类名并且是可控的。
+
+```tsx
+import { ecn } form "easy-react-classname"
+
+// ReactNode
+<div className={ecn("content test1", {test: false, "content--focus": true})} > /* codes */ </div>
+```
+
+如果要使用 css module，需要传入第三个参数
+
+```tsx
+import { ecn } form "easy-react-classname"
+import styles from "style.module.scss"
+
+// ReactNode
+<div className={ecn("content test1", {test: false, "content--focus": true}, styles)} > /* codes */ </div>
+```
+
+
+
+## 使用方法二：EasyClassName 类的使用
+
+>   要使用 EasyClassName 必须创建实例
 
 ```tsx
 import { EasyClassName } form "easy-react-classname"
@@ -51,7 +74,7 @@ const { createClassName } = new EasyClassName(styles, "module")
 
 
 
-## 可用方法
+## EasyClassName 实例可用方法
 
 ### create 创建 classname 字符串
 

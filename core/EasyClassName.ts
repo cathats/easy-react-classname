@@ -13,12 +13,12 @@ export default class EasyClassName implements EasyClassNameClass {
     const _classNames = [] as string[];
     name.split(" ").forEach((v) => {
       const _styleName = this.mode === "module" && this.styles[v] ? this.styles[v] : v;
-      _classNames.push(_styleName);
+      _styleName && _classNames.push(_styleName);
     });
     Object.keys(controlClass).forEach((key) => {
       if (!controlClass[key]) return;
       const _styleName = this.mode === "module" && this.styles[key] ? this.styles[key] : key;
-      _classNames.push(_styleName);
+      _styleName && _classNames.push(_styleName);
     });
     return _classNames.join(" ");
   }
@@ -26,4 +26,8 @@ export default class EasyClassName implements EasyClassNameClass {
   createClassName = (name: string, controlClass: Record<string, boolean> = {}) => {
     return { className: this.create(name, controlClass) };
   };
+
+  static createClassName = (name: string, controlClass: Record<string, boolean> = {}) => {
+    const _classNames = [] as string[];
+  }
 }
