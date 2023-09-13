@@ -1,8 +1,10 @@
 import { Styles } from "./type";
 
-export function ecn(name: string | string[], controlClass: Record<string, boolean> = {}, styles?: Styles): string {
+type EcnType = (name: string | Array<string | undefined>, controlClass?: Record<string, boolean>, styles?: Styles) => string;
+export const ecn: EcnType = (name, controlClass = {}, styles = {}) => {
   const _classNames = [] as string[];
-  const resolveName = (v: string) => {
+  const resolveName = (v: string | undefined) => {
+    if (!v || typeof v !== "string") return;
     v.split(" ").forEach((v) => {
       const _styleName = styles && styles[v] ? styles[v] : v;
       _styleName && _classNames.push(_styleName);
@@ -23,4 +25,4 @@ export function ecn(name: string | string[], controlClass: Record<string, boolea
     _styleName && _classNames.push(_styleName);
   });
   return _classNames.join(" ");
-}
+};
