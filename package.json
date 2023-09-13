@@ -1,6 +1,6 @@
 {
   "name": "easy-react-classname",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "easy-react-classname 用于在 React 中便捷、直观地导入 CSS 类名，并允许通过开关的方式切换类名",
   "main": "./lib/index.js",
   "module": "./lib/index.mjs",

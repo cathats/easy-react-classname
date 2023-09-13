@@ -18,6 +18,6 @@ declare class EasyClassName implements EasyClassNameClass {
     static createClassName: (name: string, controlClass?: Record<string, boolean>) => void;
 }
 
-declare function ecn(name: string, controlClass: Record<string, boolean>, styles?: Styles): string;
+declare function ecn(name: string | string[], controlClass?: Record<string, boolean>, styles?: Styles): string;
 
 export { EasyClassName, ecn };
